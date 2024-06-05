@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="all.min.css"> -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div id="box" class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+        <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+          <header
+            class="box-header w-100 d-flex justify-content-between align-items-center mb-4"
+          >
+            <div class="circles d-flex">
+              <span class="rounded-circle circle me-2"></span>
+              <span class="rounded-circle circle1 me-2"></span>
+              <span class="rounded-circle circle2 me-2"></span>
+            </div>
+            <button onclick="closeBox()" class="btn border-0" id="closeBtn">
+              <i class="fa-solid fa-xmark close fs-3"></i>
+            </button>
+          </header>
+          <p class="validation m-0 pb-2">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ol class="rules list-unstyled m-0">
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site name must
+              contain at least 3 characters
+            </li>
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site name must
+              start with capital letter
+            </li>
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+              valid one
+            </li>
+          </ol>
+        </div>
+      </div>
+
+        <div class="container">
+            <div class="header pb-5">
+                <h1 class="text-center pt-5">Bookmarker</h1>
+                <div class="layer"></div>
+            </div>
+            <hr>
+            <div class="bookmark d-flex justify-content-center">
+                <h4 class="text-center"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h4>
+            </div>
+            <label for="BookmarkName" class="pb-2"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+            <input type="text" id="BookmarkName" class="form-control" placeholder="Bookmark Name">
+            <label for="WebsiteUrl" class="pt-4 pb-2"><i class="fa-solid fa-link"></i> Site URL</label>
+            <input type="text" id="WebsiteUrl" class="form-control" placeholder="Website URL">
+            <div class="btns d-flex justify-content-center mb-4">
+                <button onclick="add()" class="btn1 btn btn-submit px-5  mt-3 text-white" id="submitBtn">Submit</button>
+            </div>
+            <hr>
+            <div class="table">
+                <table class="table bg-light text-center">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Website Name</th>
+                            <th>Visit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="Tablebody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
